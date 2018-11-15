@@ -4,7 +4,7 @@ ruby '2.5.1'
 
 gem 'pg', '~> 1.0.0'
 gem 'puma', '~> 3.11'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.1'
 
 gem 'bootsnap', '>= 1.1.0', require: false  # Reduces boot times through caching; required in config/boot.rb
 gem 'mini_magick', '~> 4.8'                 # Use ActiveStorage variant
@@ -25,7 +25,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 2.15', '< 4.0'        # Adds support for Capybara system testing
+  gem 'capybara', '>= 2.15'                 # Adds support for Capybara system testing
   gem 'database_cleaner', '~> 1.7.0'        # Ensures a clean DB state during tests
   gem 'factory_bot_rails', '~> 4.10.0'
   gem 'faker', '~> 1.8.7'

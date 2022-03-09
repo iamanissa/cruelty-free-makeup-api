@@ -1,0 +1,30 @@
+# Metrics/AbcSiz computes a number that represents the "size" of the method.  
+Metrics/AbcSize:
+  Max: 75 # 15 is the default
+
+# Metrics/BlockLength checks for long blocks and has a default limit of 25 (not counting comment lines).
+Metrics/BlockLength:
+  Exclude:  # skip all of the following....
+    - spec/**/* # 'describe', 'context' and FactoryBot blocks are typically very large
+    - config/routes.rb # routes.rb is a single large block by definition
+    - db/migrate/**/* # The migrate folder frequently has large blocks
+    - db/data/**/* # Data migrations folder for the data_migrate gem
+
+# Metrics/ClassLength ensures clases stay small (within a file).  DID(it) considers the 100 default to be too tight.
+Metrics/ClassLength:
+  Max: 200 # 100 is the default
+
+# Metrics/LineLength ensures lines don't exceed a given limit.  The default 80 character default to too restrictive.
+Metrics/LineLength:
+  Max: 130 # default is 80
+
+# Metrics/MethodLength ensures methods stay small.   DID(it) consider the default of 10 to be too tight for **RUBY** code.
+Metrics/MethodLength:
+  Exclude:  # skip all of the following....
+    - db/migrate/**/* # Too many false positives in the migrate folder.  See Issue #60 for more info.
+    - db/data/**/* # Data migrations directory for the data_migrate gem
+  Max: 15 # 10 is the default
+
+# Metrics/ModuleLength ensures modules stay small (within a file).  DID(it) considers the default of 100 to be too tight.
+Metrics/ModuleLength:
+  Max: 200 # 100 is the default

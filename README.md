@@ -18,3 +18,4 @@ $ rake db:create db:migrate
 $ bundle exec rspec
 ```
 
+Lets go!

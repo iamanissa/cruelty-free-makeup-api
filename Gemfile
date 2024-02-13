@@ -1,18 +1,17 @@
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.5'
+ruby '3.2.1'
 
 gem "pg"
-gem "puma", "~> 5.0"
-gem "rails", "~> 7.0.2"
+gem "puma", ">= 5.0"
+gem "rails", "~> 7.1.3"
 
 gem "sprockets-rails" # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 
 # gem "bcrypt", "~> 3.1.7"          # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "image_processing", "~> 1.2"  # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "kredis"                      # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "redis", "~> 4.0"             # Use Redis adapter to run Action Cable in production
+# gem "redis", ">= 4.0.1"           # Use Redis adapter to run Action Cable in production
 
 gem "bootsnap", require: false              # Reduces boot times through caching; required in config/boot.rb
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -42,5 +41,4 @@ group :test do
   gem "faker", "~> 1.8.7"
   gem "selenium-webdriver"
   gem "shoulda-matchers", "~> 3.1.2"
-  gem "webdrivers"
 end

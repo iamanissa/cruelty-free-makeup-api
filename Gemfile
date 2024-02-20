@@ -35,8 +35,7 @@ group :development do
 end
 
 group :test do
-  gem "capybara"                                    # Adds support for Capybara system testing
-  gem 'database_cleaner', '~> 2.0', '>= 2.0.2'      # Ensures a clean DB state during tests
+  gem 'capybara', '~> 3.40'                                    # Adds support for Capybara system testing
   gem 'factory_bot_rails', '~> 6.2'
   gem 'faker', '~> 3.2', '>= 3.2.3'
   gem "selenium-webdriver"

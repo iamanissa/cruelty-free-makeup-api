@@ -96,12 +96,6 @@ GEM
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crass (1.0.6)
-    database_cleaner (2.0.2)
-      database_cleaner-active_record (>= 2, < 3)
-    database_cleaner-active_record (2.1.0)
-      activerecord (>= 5.a)
-      database_cleaner-core (~> 2.0.0)
-    database_cleaner-core (2.0.1)
     date (3.3.4)
     diff-lcs (1.5.1)
     drb (2.2.0)
@@ -283,8 +277,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   byebug
-  capybara
-  database_cleaner (~> 2.0, >= 2.0.2)
+  capybara (~> 3.40)
   factory_bot_rails (~> 6.2)
   faker (~> 3.2, >= 3.2.3)
   importmap-rails
@@ -307,4 +300,4 @@ RUBY VERSION
    ruby 3.2.1p31
 
 BUNDLED WITH
-   2.1.4
+   2.5.6

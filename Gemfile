@@ -23,9 +23,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ] # Windows does n
 
 
 group :development, :test do
-  gem "byebug", platforms: %i[mri mingw x64_mingw]
-  # gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  # gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'faker', '~> 3.2', '>= 3.2.3'
+  gem 'pry-rails'
   gem "rspec-rails"
 end
 

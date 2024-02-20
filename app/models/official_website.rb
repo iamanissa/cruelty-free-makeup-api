@@ -1,0 +1,2 @@
+class OfficialWebsite < Website
+end

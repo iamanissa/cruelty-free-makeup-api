@@ -1,0 +1,2 @@
+class PurchaseWebsite < Website
+end

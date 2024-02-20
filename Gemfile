@@ -25,6 +25,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ] # Windows does n
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   # gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'faker', '~> 3.2', '>= 3.2.3'
   gem "rspec-rails"
 end
 
@@ -37,7 +38,6 @@ end
 group :test do
   gem 'capybara', '~> 3.40'                                    # Adds support for Capybara system testing
   gem 'factory_bot_rails', '~> 6.2'
-  gem 'faker', '~> 3.2', '>= 3.2.3'
   gem "selenium-webdriver"
   gem 'shoulda-matchers', '~> 6.1'
 end

@@ -30,15 +30,15 @@ end
 
 group :development do
   # gem "rack-mini-profiler" # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  gem "spring" # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  gem "web-console" # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem "spring"       # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
+  gem "web-console"  # Use console on exceptions pages [https://github.com/rails/web-console]
 end
 
 group :test do
-  gem "capybara"                            # Adds support for Capybara system testing
-  gem "database_cleaner", "~> 1.7.0"        # Ensures a clean DB state during tests
-  gem "factory_bot_rails", "~> 4.10.0"
-  gem "faker", "~> 1.8.7"
+  gem "capybara"                                    # Adds support for Capybara system testing
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.2'      # Ensures a clean DB state during tests
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'faker', '~> 3.2', '>= 3.2.3'
   gem "selenium-webdriver"
-  gem "shoulda-matchers", "~> 3.1.2"
+  gem 'shoulda-matchers', '~> 6.1'
 end

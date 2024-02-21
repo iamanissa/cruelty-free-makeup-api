@@ -1,2 +1,0 @@
-class OfficialWebsite < Website
-end

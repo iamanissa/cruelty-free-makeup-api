@@ -8,10 +8,12 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 require_relative './brands_seeding'
+require_relative './official_websites_seeding'
 
 puts "Seeding..."
 
 seed_brands
+seed_official_websites
 
 puts "Seeding done."
 

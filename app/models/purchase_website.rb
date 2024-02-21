@@ -1,2 +1,0 @@
-class PurchaseWebsite < Website
-end

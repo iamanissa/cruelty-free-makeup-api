@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_20_212154) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_21_190342) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_212154) do
     t.integer "price_category"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.boolean "cruelty_free", default: true, null: false
+    t.boolean "vegan", default: false, null: false
+    t.boolean "organic", default: false, null: false
+    t.boolean "leaping_bunny", default: false, null: false
+    t.boolean "peta", default: false, null: false
+    t.boolean "clean_beauty", default: false, null: false
+    t.boolean "choose_cruelty_free", default: false, null: false
   end
 
   create_table "products", force: :cascade do |t|

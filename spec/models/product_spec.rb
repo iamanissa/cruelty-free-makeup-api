@@ -4,7 +4,7 @@ RSpec.describe Product, type: :model do
   describe 'Schema' do
     it {is_expected.to have_db_column :id}
     it {is_expected.to have_db_column :name}
-    it {is_expected.to have_db_column :type}
+    it {is_expected.to have_db_column :type} # FIXME: Type is a reserved word for STI, fix this.
     it {is_expected.to have_db_column :color_number}
     it {is_expected.to have_db_column :color_name}
 

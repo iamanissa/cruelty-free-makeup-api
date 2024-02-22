@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require_relative './brands_seeding'
+
+puts "Seeding..."
+
+seed_brands
+# seed_purchase_websites
+
+puts "Seeding done."
+

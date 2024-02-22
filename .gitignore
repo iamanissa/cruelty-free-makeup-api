@@ -29,3 +29,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Mac folder view configuration files
+.DS_Store
+
+# Application specific files
+node_modules
+.sass-cache

@@ -23,22 +23,23 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ] # Windows does n
 
 
 group :development, :test do
-  gem "byebug", platforms: %i[mri mingw x64_mingw]
-  # gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  # gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'faker', '~> 3.2', '>= 3.2.3'
+  gem 'pry-nav'
+  gem 'pry-rails'
   gem "rspec-rails"
 end
 
 group :development do
   # gem "rack-mini-profiler" # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  gem "spring" # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  gem "web-console" # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem "spring"       # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
+  gem "web-console"  # Use console on exceptions pages [https://github.com/rails/web-console]
 end
 
 group :test do
-  gem "capybara"                            # Adds support for Capybara system testing
-  gem "database_cleaner", "~> 1.7.0"        # Ensures a clean DB state during tests
-  gem "factory_bot_rails", "~> 4.10.0"
-  gem "faker", "~> 1.8.7"
+  gem 'capybara', '~> 3.40'                                    # Adds support for Capybara system testing
+  gem 'factory_bot_rails', '~> 6.2'
   gem "selenium-webdriver"
-  gem "shoulda-matchers", "~> 3.1.2"
+  gem 'shoulda-matchers', '~> 6.1'
 end

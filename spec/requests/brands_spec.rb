@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Brands API', type: :request do
+  include RequestSpecHelper
   # initialize test data
   let!(:brands) { create_list(:brand, 10) }
   let(:brand_id) { brands.first.id }
@@ -75,7 +76,7 @@ RSpec.describe 'Brands API', type: :request do
 
       it 'returns a validation failure message' do
         expect(response.body)
-          .to match(/Validation failed: Name can't be blank, Url can't be blank/)
+          .to match(/Validation failed: Url can't be blank/)
       end
     end
   end

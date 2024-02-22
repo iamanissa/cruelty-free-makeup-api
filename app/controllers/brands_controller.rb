@@ -34,7 +34,7 @@ class BrandsController < ApplicationController
 
   def brand_params
     # whitelist params
-    params.permit(:title, :created_by)
+    params.permit(:name, :url)
   end
 
   def set_brand

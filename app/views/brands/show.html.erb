@@ -1,0 +1,11 @@
+<h1><%= @brand.name %></h1>
+
+<p>Cruelty-Free: <%= @brand.cruelty_free %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_brand_path(@brand) %></li>
+  <li><%= link_to "Destroy", brand_path(@brand), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

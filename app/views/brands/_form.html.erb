@@ -1,0 +1,23 @@
+<%= form_with model: brand do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% brand.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :cruelty_free %><br>
+    <%= form.check_box :cruelty_free %>
+  </div>
+
+  <div>
+    <%= form.label :peta %><br>
+    <%= form.check_box :peta %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

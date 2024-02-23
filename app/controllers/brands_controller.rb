@@ -1,43 +1,50 @@
 class BrandsController < ApplicationController
-  before_action :set_brand, only: [:show, :update, :destroy]
-
-  # GET /brands
   def index
     @brands = Brand.all
-    json_response(@brands)
   end
 
-  # POST /brands
-  def create
-    @brand = Brand.create!(brand_params)
-    json_response(@brand, :created)
-  end
-
-  # GET /brands/:id
   def show
-    json_response(@brand)
+    @brand = Brand.find(params[:id])
   end
 
-  # PUT /brands/:id
+  def new
+    @brand = Brand.new
+  end
+
+  def create
+    @brand = Brand.new(brand_params)
+
+    if @brand.save
+      redirect_to @brand
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @brand = Brand.find(params[:id])
+  end
+
   def update
-    @brand.update(brand_params)
-    head :no_content
+    @brand = Brand.find(params[:id])
+
+    if @brand.update(brand_params)
+      redirect_to @brand
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
-  # DELETE /brands/:id
   def destroy
+    @brand = Brand.find(params[:id])
     @brand.destroy
-    head :no_content
+
+    redirect_to root_path, status: :see_other
   end
 
   private
 
   def brand_params
-    # whitelist params
-    params.permit(:name, :url)
-  end
-
-  def set_brand
-    @brand = Brand.find(params[:id])
+    params.require(:brand).permit(:name, :url, :cruelty_free, :peta, :leaping_bunny)
   end
 end

@@ -33,6 +33,7 @@ end
 
 group :development do
   # gem "rack-mini-profiler" # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
+  gem "listen"
   gem "spring"       # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   gem "web-console"  # Use console on exceptions pages [https://github.com/rails/web-console]
 end

@@ -1,0 +1,35 @@
+<%= turbo_frame_tag "brands", class: "shadow overflow-hidden rounded border-b border-gray-200" do %>
+  <div style="margin: 20px;">
+    <table
+      class="table"
+      data-toggle="table"
+      data-pagination="true"
+      data-search="true"
+      data-page-list="[10, 25, 50, 100]"
+      data-show-footer="true"
+    >
+      <thead class="bg-gray-800 text-white">
+        <tr>
+          <th id="brand-name" data-sortable="true" data-field="name" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
+            <span>Name</span>
+          </th>
+          <th id="brand-official-site" data-field="brand-official-site" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
+            <%= link_to("Official WebSite", brands_path(column: "url")) %>
+          </th>
+          <th id="brand-certs" data-field="brand-certs" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
+            <span>Certifications</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @brands.each do |brand| %>
+          <tr>
+            <td class="text-left py-3 px-6"><%= brand.name %></td>
+            <td class="text-left py-3 px-6"><%= brand.url ? (link_to "Official Site", brand.url) : "" %></td>
+            <td class="text-left py-3 px-6"><%= brand.cruelty_free %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

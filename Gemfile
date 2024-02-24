@@ -14,6 +14,8 @@ gem "sprockets-rails" # The original asset pipeline for Rails [https://github.co
 # gem "redis", ">= 4.0.1"           # Use Redis adapter to run Action Cable in production
 
 gem "bootsnap", require: false              # Reduces boot times through caching; required in config/boot.rb
+gem 'bootstrap', '~> 5.3', '>= 5.3.1'
+gem "bootstrap-table-rails"
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "jbuilder"        # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "stimulus-rails"  # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
@@ -21,6 +23,9 @@ gem "sassc-rails"     # Use Sass to process CSS
 gem "turbo-rails"     # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ] # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 
+gem "cssbundling-rails", "~> 1.4"
+gem "jsbundling-rails", "~> 1.3"
+gem "hotwire-rails", "~> 0.1.3"
 
 group :development, :test do
   # gem "byebug", platforms: %i[mri mingw x64_mingw]

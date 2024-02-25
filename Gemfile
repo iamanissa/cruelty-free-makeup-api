@@ -18,6 +18,7 @@ gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/
 gem "jbuilder"        # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "stimulus-rails"  # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "sassc-rails"     # Use Sass to process CSS
+gem "tailwindcss-rails", "~> 2.3"
 gem "turbo-rails"     # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ] # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 
@@ -44,3 +45,4 @@ group :test do
   gem "selenium-webdriver"
   gem 'shoulda-matchers', '~> 6.1'
 end
+

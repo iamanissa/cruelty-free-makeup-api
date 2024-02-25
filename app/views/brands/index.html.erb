@@ -1,11 +1,26 @@
 <h1>Brands</h1>
 
-<ul>
-  <% @brands.each do |brand| %>
-    <li>
-      <%= link_to brand.name, brand %>
-    </li>
-  <% end %>
-
-  <%= link_to "New Brand", new_brand_path %>
-</ul>
+<div class="flex flex-col">
+  <div class="-m-1.5 overflow-x-auto">
+    <div class="p-1.5 min-w-full inline-block align-middle">
+      <div class="border rounded-lg overflow-hidden dark:border-gray-700">
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+          <thead>
+            <tr>
+              <th scope="col" class="rounded-l-lg px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Brand Name</th>
+              <th scope="col" class="rounded-r-lg px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Official Site</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+            <% @brands.each do |brand| %>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200"> <%= brand.name%></td>
+                <td><%= brand.url ? link_to("Official Site", brand.url) : "" %></td><td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

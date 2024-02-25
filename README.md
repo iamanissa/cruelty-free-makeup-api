@@ -17,7 +17,7 @@ Bundler, Rails, Ruby, Postgres, and Yarn have been updated.
 2. Database creation (Postrgresql)
 ```
 $ rake db:create db:migrate db:seed
-$ rails s
+$ ./bin/dev
 ```
 
 3. How to run the test suite (Rspec)

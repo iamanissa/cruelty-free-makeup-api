@@ -1,6 +1,8 @@
 class BrandsController < ApplicationController
   def index
-    @brands = Brand.all
+    # @brands = Brand.all
+    # @brands = Brand.where("name LIKE ?", "%#{params[:filter]}%")
+    @pagy, @brands = pagy(Brand.all)
   end
 
   def show

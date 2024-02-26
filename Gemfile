@@ -15,7 +15,9 @@ gem "sprockets-rails" # The original asset pipeline for Rails [https://github.co
 
 gem "bootsnap", require: false              # Reduces boot times through caching; required in config/boot.rb
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+gem "hotwire-rails"
 gem "jbuilder"        # Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem 'pagy'
 gem "stimulus-rails"  # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "sassc-rails"     # Use Sass to process CSS
 gem "tailwindcss-rails", "~> 2.3"

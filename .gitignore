@@ -36,3 +36,5 @@
 # Application specific files
 node_modules
 .sass-cache
+/app/assets/builds/*
+!/app/assets/builds/.keep

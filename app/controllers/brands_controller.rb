@@ -1,6 +1,9 @@
 class BrandsController < ApplicationController
+  include Pagy::Backend
+
   def index
-    @brands = Brand.all
+    @q = Brand.ransack(params[:q])
+    @pagy, @brands = pagy(@q.result(distinct: true), items: 10)
   end
 
   def show

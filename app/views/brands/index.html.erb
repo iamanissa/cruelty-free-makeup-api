@@ -8,22 +8,26 @@
     <div class="p-1.5 min-w-full inline-block align-middle">
       <div class="rounded-lg shadow overflow-hidden dark:border-gray-700 dark:shadow-gray-900">
 
-      <div class="rounded-lg mb-1.5 mx-1.5 float-right bg-white">
-        <label for="table-search" class="sr-only">Search</label>
-        <div class="relative mt-1">
-            <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                </svg>
+        <%= search_form_for @q do |f| %>
+          <div class="float-right m-2.5">
+            <div class="relative">
+              <%= f.search_field :name_cont, 
+                class: "pull-left pt-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 focus:ring-blue-500 focus:border-blue-500",
+                placeholder: "Search by Brand Name"
+              %>
+              <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-4">
+                <span class="text-gray-500"><i class="fa-solid fa-magnifying-glass"></i></span>
+              </div>
             </div>
-            <input type="text" id="table-search" class="block pt-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 focus:ring-blue-500 focus:border-blue-500" placeholder="Search for items">
-        </div>
-      </div>
+          </div>
+        <% end %>
 
         <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
           <thead>
             <tr>
-              <th scope="col" class="border rounded-l-lg px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Brand Name</th>
+              <th scope="col" class="border rounded-l-lg px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
+                <%= sort_link(@q, :name, "Brand Name", default_order: :asc) %>
+              </th>
               <th scope="col" class="border rounded-r-lg px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Official Site</th>
               <th scope="col" class="border rounded-r-lg px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Certs</th>
               <th scope="col" class="border rounded-r-lg px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Actions</th>
@@ -40,8 +44,7 @@
             <% end %>
           </tbody>
         </table>
-
-        <div class="flex items-center">
+        <div class="flex items-center justify-center">
           <%== pagy_nav(@pagy) %>
         </div>
       </div>

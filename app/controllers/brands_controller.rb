@@ -1,8 +1,9 @@
 class BrandsController < ApplicationController
+  include Pagy::Backend
+
   def index
-    # @brands = Brand.all
-    # @brands = Brand.where("name LIKE ?", "%#{params[:filter]}%")
-    @pagy, @brands = pagy(Brand.all, items: 10)
+    @q = Brand.ransack(params[:q])
+    @pagy, @brands = pagy(@q.result(distinct: true), items: 10)
   end
 
   def show

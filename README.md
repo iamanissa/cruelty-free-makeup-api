@@ -33,9 +33,14 @@ Data credit goes to [Cruelty-free Kitty](https://www.crueltyfreekitty.com/). Her
 ## Brands
 Brands include the brand `name`, `url` and `category_price`, and different cruelty-free category booleans.
 
+#### Backend
 <img width="700" alt="Screenshot 2024-02-22 at 1 59 36 PM" src="https://github.com/iamanissa/cruelty-free-makeup-api/assets/7739016/3aed1386-2207-4b2b-b0c9-4d45ef7c6107">
 
 * Note: Using Postman to visualize and check endpoints
+
+#### Frontend
+<img width="700" alt="Screenshot 2024-02-26 at 1 58 40 AM" src="https://github.com/iamanissa/cruelty-free-makeup-api/assets/7739016/2cb624d2-c0cc-4ec2-884d-6c8cf5e7c0fb">
+
 
 ## Products
 Products is each item within a brand.
